@@ -1,0 +1,25 @@
+b-button {
+  --btt-padding-top-bottom: 0.5rem;
+  --btt-padding-left-right: 0.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  padding: var(--btt-padding-top-bottom) var(--btt-padding-left-right);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+b-button.blue {
+  background-color: var(--btt-blue);
+  color: var(--btt-white);
+}
+b-button.lightBlue {
+  background-color: var(--btt-lightblue);
+  color: var(--btt-gray-900);
+}
+b-button.red {
+  background-color: var(--btt-red);
+  color: var(--btt-white);
+}
+b-button.yellow {
+  background-color: var(--btt-yellow);
+  color: var(--btt-gray-900);
+}
