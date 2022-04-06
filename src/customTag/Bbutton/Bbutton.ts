@@ -5,7 +5,12 @@ class Button extends HTMLElement {
   constructor() {
     super();
     this.init();
-    console.log(this.getAttributeNames())
+    this.onclick = (e) => {
+      this.focus(); // keyword 'this' is the instance in this scope
+    };
+  }
+  focus() {
+    this.tabIndex = 1;
   }
   init() {
     console.log(`Custom Tag ${this.name} init, Name is ${this.innerText}.`);

@@ -1,4 +1,6 @@
+/* b-button basic style */
 b-button {
+  cursor: pointer;
   --btt-padding-top-bottom: 0.5rem;
   --btt-padding-left-right: 0.75rem;
   border-radius: 0.25rem;
@@ -6,6 +8,21 @@ b-button {
   padding: var(--btt-padding-top-bottom) var(--btt-padding-left-right);
   font-size: 16px;
   letter-spacing: 1px;
+  // color
+  background-color: var(--btt-white);
+  color: var(--btt-gray-900);
+  border: 1px solid var(--btt-gray-500);
+}
+b-button:hover {
+  opacity: 0.85;
+}
+b-button:active {
+  background-color: var(--btt-gray-900);
+  color: var(--btt-white);
+}
+b-button:focus {
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 0 0 0.125rem var(--btt-gray-500);
 }
 b-button.blue {
   background-color: var(--btt-blue);
