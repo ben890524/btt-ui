@@ -5,6 +5,7 @@ b-button {
   --btt-padding-left-right: 0.75rem;
   border-radius: 0.25rem;
   border: none;
+  outline: none;
   padding: var(--btt-padding-top-bottom) var(--btt-padding-left-right);
   font-size: 16px;
   letter-spacing: 1px;
@@ -17,6 +18,7 @@ b-button:hover {
   opacity: 0.85;
 }
 b-button:active {
+  transition: 0.25s ease-in-out;
   background-color: var(--btt-gray-900);
   color: var(--btt-white);
 }
@@ -28,15 +30,32 @@ b-button.blue {
   background-color: var(--btt-blue);
   color: var(--btt-white);
 }
+b-button.blue:active {
+  background-color: var(--btt-white);
+  color: var(--btt-blue);
+}
 b-button.lightBlue {
   background-color: var(--btt-lightblue);
+  color: var(--btt-white);
+}
+b-button.lightBlue:active {
+  background-color: var(--btt-white);
   color: var(--btt-gray-900);
 }
 b-button.red {
   background-color: var(--btt-red);
   color: var(--btt-white);
 }
+b-button.red:active {
+  background-color: var(--btt-white);
+  color: var(--btt-red);
+}
 b-button.yellow {
   background-color: var(--btt-yellow);
+  color: var(--btt-gray-900);
+}
+b-button.lightBlue:active,
+b-button.yellow:active {
+  background-color: var(--btt-white);
   color: var(--btt-gray-900);
 }
