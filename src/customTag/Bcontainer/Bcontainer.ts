@@ -7,7 +7,7 @@ class Container extends HTMLElement {
     this.init();
   }
   init() {
-    console.log(`Custom Tag ${this.name} init, Name is ${this.name}.`);
+    console.log(`Custom Tag ${this.name} init.`);
   }
 }
 export default Container;

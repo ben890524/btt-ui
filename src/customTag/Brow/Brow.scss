@@ -1,0 +1,9 @@
+b-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+b-row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}

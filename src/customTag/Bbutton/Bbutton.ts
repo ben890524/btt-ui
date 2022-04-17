@@ -1,16 +1,10 @@
 import "./Bbutton.scss";
-
-class Button extends HTMLElement {
-  name: string = "Button";
+import BaseViewComponent from "../BaseViewComponent"
+class Button extends BaseViewComponent {
   constructor() {
-    super();
-    this.init();
+    super("Button");
     // this.onclick = (e) => {
     // };
-  }
-  init() {
-    this.tabIndex = 1;
-    console.log(`Custom Tag ${this.name} init, Name is ${this.innerText}.`);
   }
 }
 export default Button;

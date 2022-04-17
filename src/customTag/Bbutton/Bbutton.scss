@@ -8,6 +8,7 @@ b-button {
   outline: none;
   padding: var(--btt-padding-top-bottom) var(--btt-padding-left-right);
   font-size: 16px;
+  text-align: center;
   letter-spacing: 1px;
   // color
   background-color: var(--btt-white);
@@ -18,7 +19,7 @@ b-button:hover {
   opacity: 0.85;
 }
 b-button:active {
-  transition: 0.25s ease-in-out;
+  transition: 0.2s ease-in-out;
   background-color: var(--btt-gray-900);
   color: var(--btt-white);
 }
