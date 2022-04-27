@@ -1,4 +1,5 @@
-import BmutationObserver from "./BmutationObserver";
+import BViewMutationObserver from "./MutationObserver/BViewMutationObserver";
+import InitBaseViewComponentAttributes from "./InitCheckAttributes/InitBaseViewComponentAttributes";
 class BaseViewComponent extends HTMLElement {
   name: string = "ViewComponent";
   constructor(componentName: string) {
@@ -12,16 +13,14 @@ class BaseViewComponent extends HTMLElement {
     console.log(`Custom Tag ${this.name} init.`);
   }
   selfAttrubutesCheck() {
-    this.checkTextBold();
+    InitBaseViewComponentAttributes(this);
   }
   initObserver() {
-    const observer = new BmutationObserver();
-    observer.observe(this, { attributeFilter : ["text-bold"] });
-  }
-  checkTextBold() {
-    this.hasAttribute("text-bold")
-      ? this.classList.add("bold")
-      : this.classList.remove("bold");
+    const observer = new BViewMutationObserver();
+    observer.observe(this, {
+      attributeOldValue: true,
+      attributeFilter: ["text-bold", "animation"],
+    });
   }
 }
 export default BaseViewComponent;

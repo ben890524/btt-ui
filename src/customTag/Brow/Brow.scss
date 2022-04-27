@@ -1,9 +1,15 @@
 b-row {
+  --btt-margin-x: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  margin-right: calc(-0.5 * var(--btt-margin-x));
+  margin-left: calc(-0.5 * var(--btt-margin-x));
 }
 b-row > * {
+  box-sizing: border-box;
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
+  padding-right: calc(var(--btt-margin-x) * 0.5);
+  padding-left: calc(var(--btt-margin-x) * 0.5);
 }
