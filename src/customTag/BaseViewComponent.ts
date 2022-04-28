@@ -1,5 +1,5 @@
-import BViewMutationObserver from "./MutationObserver/BViewMutationObserver";
-import InitBaseViewComponentAttributes from "./InitCheckAttributes/InitBaseViewComponentAttributes";
+import BViewMutationObserver from "./Detector/MutationObserver/BViewMutationObserver";
+import InitBaseViewComponentAttributes from "./Detector/InitCheckAttributes/InitBaseViewComponentAttributes";
 class BaseViewComponent extends HTMLElement {
   name: string = "ViewComponent";
   constructor(componentName: string) {
@@ -16,7 +16,7 @@ class BaseViewComponent extends HTMLElement {
     InitBaseViewComponentAttributes(this);
   }
   initObserver() {
-    const observer = new BViewMutationObserver();
+    const observer = new BViewMutationObserver(this);
     observer.observe(this, {
       attributeOldValue: true,
       attributeFilter: ["text-bold", "animation"],

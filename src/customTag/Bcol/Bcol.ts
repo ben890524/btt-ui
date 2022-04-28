@@ -1,5 +1,5 @@
 import "./Bcol.scss";
-import BColMutationObserver from "../MutationObserver/BColMutationObserver";
+import BColMutationObserver from "../Detector/MutationObserver/BColMutationObserver";
 class Col extends HTMLElement {
   name: string = "Col";
   constructor() {
