@@ -8,6 +8,7 @@ class BaseViewComponent extends HTMLElement {
     this.init();
   }
   init() {
+    this.tabIndex = 1;
     this.selfAttrubutesCheck();
     this.initObserver();
     console.log(`Custom Tag ${this.name} init.`);

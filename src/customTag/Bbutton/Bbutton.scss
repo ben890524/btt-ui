@@ -39,6 +39,34 @@ b-button:focus {
   transition: 0.25s ease-in-out;
   box-shadow: 0 0 0 0.125rem var(--btt-gray-500);
 }
+b-button.lightGray,
+b-button.lightGrey {
+  background-color: var(--btt-gray-200);
+  color: var(--btt-gray-dark);
+}
+b-button.lightGray:active,
+b-button.lightGrey:active {
+  background-color: var(--btt-gray-dark);
+  color: var(--btt-gray-200);
+}
+b-button.gray,
+b-button.grey {
+  background-color: var(--btt-gray-500);
+  color: var(--btt-gray-dark);
+}
+b-button.gray:active,
+b-button.grey:active {
+  background-color: var(--btt-gray-dark);
+  color: var(--btt-gray-500);
+}
+b-button.dark {
+  background-color: var(--btt-gray-dark);
+  color: var(--btt-white);
+}
+b-button.dark:active {
+  background-color: var(--btt-white);
+  color: var(--btt-gray-dark);
+}
 b-button.blue {
   background-color: var(--btt-blue);
   color: var(--btt-white);
@@ -47,14 +75,6 @@ b-button.blue:active {
   background-color: var(--btt-white);
   color: var(--btt-blue);
 }
-b-button.lightBlue {
-  background-color: var(--btt-lightblue);
-  color: var(--btt-white);
-}
-b-button.lightBlue:active {
-  background-color: var(--btt-white);
-  color: var(--btt-gray-900);
-}
 b-button.red {
   background-color: var(--btt-red);
   color: var(--btt-white);
@@ -62,6 +82,10 @@ b-button.red {
 b-button.red:active {
   background-color: var(--btt-white);
   color: var(--btt-red);
+}
+b-button.lightBlue {
+  background-color: var(--btt-lightblue);
+  color: var(--btt-white);
 }
 b-button.yellow {
   background-color: var(--btt-yellow);
