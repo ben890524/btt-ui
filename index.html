@@ -3,14 +3,235 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Bittaat Document</title>
+    <title>Test Btt-ui Document</title>
     <link rel="stylesheet" href="./dist/main.css" />
     <script type="text/javascript" src="./dist/index.js" defer></script>
   </head>
-
+  <style>
+    body {
+      background-color: whitesmoke;
+      padding: 0;
+      margin: 0;
+    }
+    b-container {
+      margin-bottom: 10px;
+      background-color: white;
+      text-align: left;
+      margin-top: 15px;
+      padding-bottom: 10px;
+      border-radius: 8px;
+    }
+    .target {
+      background-color: wheat;
+    }
+    p {
+      margin: 0;
+      height: fit-content;
+    }
+    code {
+      font-family: Consolas, "courier new";
+      color: crimson;
+      padding: 2px;
+      font-size: 105%;
+    }
+    .codeArea {
+      padding: 10px 0;
+      background-color: #f1f1f1;
+    }
+    .title {
+      padding: 10px 0;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+    .col_example b-col {
+      padding: 10px;
+      font-weight: 600;
+    }
+    .btn_example b-col {
+      text-align: center;
+    }
+    .btn_example .btn_example_style b-col {
+      padding: 10px 5px;
+      letter-spacing: 1px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .animation_example {
+      text-align: center;
+    }
+    .animation_example b-row {
+      padding: 10px 5px;
+    }
+    .animation_example b-row b-col {
+      cursor: pointer;
+      text-decoration: underline;
+      letter-spacing: 0.8px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  </style>
   <body>
+    <b-container class="target">
+      <div class="title">Container 容器</div>
+      <span>這裡是b-container的範圍</span>
+      <div class="title">程式碼：</div>
+      <div class="codeArea">
+        <code>
+          &lt;b-container> <br />
+          &nbsp;&nbsp; do Something...<br />
+          &lt;/b-container>
+        </code>
+      </div>
+    </b-container>
     <b-container>
+      <div class="title">Row 列</div>
+      <b-row class="target"> <span>這裡是b-row的範圍</span></b-row>
+      <div class="title">程式碼：</div>
+      <div class="codeArea">
+        <code>
+          &lt;b-container> <br />
+          &nbsp;&nbsp; &lt;b-row><br />
+          &nbsp;&nbsp;&nbsp;&nbsp; do Something...<br />
+          &nbsp;&nbsp; &lt;/b-row><br />
+          &lt;/b-container>
+        </code>
+      </div>
+    </b-container>
+    <b-container class="col_example">
+      <div class="title">Col 欄</div>
       <b-row>
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 0.17)"
+          >col=2</b-col
+        >
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 0.34)"
+          >col=2</b-col
+        >
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 0.51)"
+          >col=2</b-col
+        >
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 0.68)"
+          >col=2</b-col
+        >
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 0.85)"
+          >col=2</b-col
+        >
+        <b-col col="2" style="background-color: rgba(83, 124, 200, 1)"
+          >col=2</b-col
+        >
+      </b-row>
+      <b-row>
+        <b-col col="3" style="background-color: rgba(83, 124, 200, 0.17)"
+          >col=3</b-col
+        >
+        <b-col col="3" style="background-color: rgba(83, 124, 200, 0.34)"
+          >col=3</b-col
+        >
+        <b-col col="3" style="background-color: rgba(83, 124, 200, 0.51)"
+          >col=3</b-col
+        >
+        <b-col col="3" style="background-color: rgba(83, 124, 200, 0.68)"
+          >col=3</b-col
+        >
+      </b-row>
+      <b-row>
+        <b-col col="4" style="background-color: rgba(83, 124, 200, 0.17)"
+          >col=4</b-col
+        >
+        <b-col col="4" style="background-color: rgba(83, 124, 200, 0.34)"
+          >col=4</b-col
+        >
+        <b-col col="4" style="background-color: rgba(83, 124, 200, 0.51)"
+          >col=4</b-col
+        >
+      </b-row>
+      <b-row>
+        <b-col col="6" style="background-color: rgba(83, 124, 200, 0.17)"
+          >col=6</b-col
+        >
+        <b-col col="6" style="background-color: rgba(83, 124, 200, 0.34)"
+          >col=6</b-col
+        >
+      </b-row>
+      <div class="title">程式碼：</div>
+      <div class="codeArea">
+        <code>
+          &lt;b-container> <br />
+          &nbsp;&nbsp; &lt;b-row><br />
+          &nbsp;&nbsp;&nbsp;&nbsp; &lt;b-col col="1~12"><br />
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; do Something...<br />
+          &nbsp;&nbsp;&nbsp;&nbsp; &lt;/b-col><br />
+          &nbsp;&nbsp; &lt;/b-row><br />
+          &lt;/b-container>
+        </code>
+      </div>
+    </b-container>
+    <b-container class="btn_example">
+      <div class="title">Button 按鈕</div>
+      <b-row>
+        <b-col col="2"
+          ><b-button class="lightGray" text-bold
+            >LightGray, 粗體</b-button
+          ></b-col
+        >
+        <b-col col="2"><b-button class="dark">Dark</b-button></b-col>
+        <b-col col="2"
+          ><b-button class="blue" text-bold>Blue, 粗體</b-button></b-col
+        >
+        <b-col col="2"><b-button class="lightBlue">LightBlue</b-button></b-col>
+        <b-col col="2"
+          ><b-button class="yellow" text-bold>Yellow, 粗體</b-button></b-col
+        >
+        <b-col col="2"><b-button class="red">Red</b-button></b-col>
+      </b-row>
+      <b-row class="btn_example_style">
+        <b-col col="2">.lightGray</b-col>
+        <b-col col="2">.dark</b-col>
+        <b-col col="2">.blue</b-col>
+        <b-col col="2">.lightBlue</b-col>
+        <b-col col="2">.yellow</b-col>
+        <b-col col="2">.red</b-col>
+      </b-row>
+      <div class="title">程式碼：</div>
+      <div class="codeArea">
+        <code> &lt;b-button> text &lt;/b-button> //一般</code> <br />
+        <code> &lt;b-button text-bold> text &lt;/b-button> //粗體</code>
+      </div>
+    </b-container>
+    <b-container class="animation_example">
+      <div class="title">B-* 動畫</div>
+      <div>
+        <b-button id="animation_example" animation="">B-* View</b-button>
+      </div>
+      <b-row>
+        <b-col col="4" onclick="changeAnimation('appear')">.appear</b-col>
+        <b-col col="4" onclick="changeAnimation('flash')">.flash</b-col>
+        <b-col col="4" onclick="changeAnimation('appear_translateX_left')"
+          >.appear_translateX_left</b-col
+        >
+      </b-row>
+      <b-row>
+        <b-col col="4" onclick="changeAnimation('appear_translateX_right')"
+          >.appear_translateX_right</b-col
+        >
+        <b-col col="4" onclick="changeAnimation('appear_translateY_up')"
+          >.appear_translateY_up</b-col
+        >
+        <b-col col="4" onclick="changeAnimation('appear_translateY_down')"
+          >.appear_translateY_down</b-col
+        >
+      </b-row>
+      <b-row>
+        <b-col col="4" onclick="changeAnimation('shakeX')">.shakeX</b-col>
+        <b-col col="4" onclick="changeAnimation('shakeY')">.shakeY</b-col>
+        <b-col col="4" onclick="changeAnimation('skewX')">.skewX</b-col>
+      </b-row>
+      <b-row>
+        <b-col col="4" onclick="changeAnimation('skewY')">.skewY</b-col>
+        <b-col col="4" onclick="changeAnimation('bounce')">.bounce</b-col>
+        <b-col col="4" onclick="changeAnimation('jelly')">.jelly</b-col>
+      </b-row>
+      <!-- <b-row>
         <b-col col="4"
           ><b-button text-bold animation="appear" class="blue"
             >Blue</b-button
@@ -45,7 +266,13 @@
         <b-col col="6"
           ><b-button animation="jelly" class="dark">Dark</b-button></b-col
         >
-      </b-row>
+      </b-row> -->
     </b-container>
+    <script>
+      function changeAnimation(animation) {
+        let target = document.getElementById("animation_example");
+        target.setAttribute("animation", animation);
+      }
+    </script>
   </body>
 </html>

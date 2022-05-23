@@ -1,9 +1,9 @@
 b-row {
-  --btt-margin-x: 1.5rem;
+  --btt-margin-x: 0rem;
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-0.5 * var(--btt-margin-x));
-  margin-left: calc(-0.5 * var(--btt-margin-x));
+  margin-right: calc(-0.25 * var(--btt-margin-x));
+  margin-left: calc(-0.25 * var(--btt-margin-x));
 }
 b-row > * {
   box-sizing: border-box;
