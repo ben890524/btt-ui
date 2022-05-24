@@ -58,12 +58,16 @@
       font-weight: 600;
     }
     .animation_example {
+      text-align: left;
+    }
+    .animation_example_btn {
       text-align: center;
     }
     .animation_example b-row {
       padding: 10px 5px;
     }
     .animation_example b-row b-col {
+      text-align: center;
       cursor: pointer;
       text-decoration: underline;
       letter-spacing: 0.8px;
@@ -200,7 +204,7 @@
     </b-container>
     <b-container class="animation_example">
       <div class="title">B-* 動畫</div>
-      <div>
+      <div class="animation_example_btn">
         <b-button id="animation_example" animation="">B-* View</b-button>
       </div>
       <b-row>
@@ -231,42 +235,13 @@
         <b-col col="4" onclick="changeAnimation('bounce')">.bounce</b-col>
         <b-col col="4" onclick="changeAnimation('jelly')">.jelly</b-col>
       </b-row>
-      <!-- <b-row>
-        <b-col col="4"
-          ><b-button text-bold animation="appear" class="blue"
-            >Blue</b-button
-          ></b-col
+      <div class="title">程式碼：</div>
+      <div class="codeArea">
+        <code>
+          &lt;b-view animation="animation_name"> text &lt;/b-view> //一般</code
         >
-        <b-col col="4"
-          ><b-button animation="appear_translateX_left" class="red"
-            >Red</b-button
-          ></b-col
-        >
-        <b-col col="4"
-          ><b-button animation="shakeX" class="yellow">Yellow</b-button></b-col
-        >
-      </b-row>
-      <b-row style="margin-top: 50px">
-        <b-col col="4"><b-button animation="skewX">Normal</b-button></b-col>
-        <b-col col="4"
-          ><b-button animation="skewY" class="lightBlue"
-            >LightBlue</b-button
-          ></b-col
-        >
-        <b-col col="4"
-          ><b-button animation="bounce" class="gray">Gray</b-button></b-col
-        >
-      </b-row>
-      <b-row style="margin-top: 50px">
-        <b-col col="6"
-          ><b-button animation="flash" class="lightGray"
-            >lightGray</b-button
-          ></b-col
-        >
-        <b-col col="6"
-          ><b-button animation="jelly" class="dark">Dark</b-button></b-col
-        >
-      </b-row> -->
+        <br />
+      </div>
     </b-container>
     <script>
       function changeAnimation(animation) {
